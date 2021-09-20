@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2-2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<div class="page-content-wrapper ">
+    <!-- START PAGE CONTENT -->
+    <div class="content ">
+        <div class=" container-fluid   container-fixed-lg">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- START card -->
+                    <div class="card card-default">
+                        <div class="card-header ">
+                            <div class="card-title">
+                                My Form
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form class="" role="form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-default required">
+                                            <label>姓</label>
+                                            <input type="text" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-default">
+                                            <label>名</label>
+                                            <input type="text" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-default required">
+                                    <label>電話</label>
+                                    <input type="number" class="form-control" required="">
+                                </div>
+                                <div class="form-group  form-group-default required">
+                                    <label>聯絡地址</label>
+                                    <input type="text" class="form-control" placeholder="ex: 台北市信義區XXX"
+                                           required="">
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="send_data()">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END card -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function send_data() {
+        Swal.fire({
+            title: 'Are you Submit?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, submit it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Success!',
+                    'Your profile has been submitted.',
+                    'success'
+                )
+            }
+        })
+    }
+</script>
+</html>
